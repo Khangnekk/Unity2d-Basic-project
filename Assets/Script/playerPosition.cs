@@ -16,6 +16,7 @@ public class playerPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerController.instance.damageReceiver.isDead()) return;
         Spawn();
         checkBomDead();
     }

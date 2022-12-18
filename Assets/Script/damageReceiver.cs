@@ -2,22 +2,19 @@ using UnityEngine;
 
 public class damageReceiver : MonoBehaviour
 {
-    protected int hp = 10;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public int hp = 10;
 
     public virtual void Receive(int damage)
     {
+        if (isDead()) return;
         hp -= damage;
-        Debug.Log(hp);
     }
+
+    public virtual bool isDead()
+    {
+        return hp <= 0;
+    }
+
+
+
 }
