@@ -1,9 +1,11 @@
+using UnityEngine;
 using UnityEngine.UI;
 
 public class playerDamageReceiver : damageReceiver
 {
     protected playerController playerController;
     public Text hpTxt;
+    public AudioSource oughSound;
     private void Start()
     {
         playerController = GetComponent<playerController>();
@@ -12,6 +14,7 @@ public class playerDamageReceiver : damageReceiver
     {
         base.Receive(damage);
         getHP();
+        oughSound.Play();
         if (isDead()) playerController.playerStatus.Dead();
     }
 

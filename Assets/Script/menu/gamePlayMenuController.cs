@@ -45,9 +45,11 @@ public class gamePlayMenuController : MonoBehaviour
 
     public void MenuButton()
     {
-        bgSound.Pause();
-        AudioListener.volume = 1;
         SceneManager.LoadScene("MainMenu");
+    }
+    public void resumeButton()
+    {
+        SceneManager.LoadScene("GamePlay");
     }
 
     public void muteButton()

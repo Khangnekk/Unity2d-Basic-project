@@ -584,11 +584,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "> The player controls the character so that the character does not collide
-    with the enemy. \n\n> While moving, the player will automatically drop 5 bombs.
-    The bomb will disappear after a period of time. Bombs will only kill enemies.
-    \n\n> The player has 10 health. Every time you collide with an enemy, 1 health
-    will be deducted. Have fun playing the game"
+  m_Text: 'You will control Player, help him to avoid the enemy.
+
+
+    While moving,
+    Player will automatically drop five bombs. The bombs will not disappear when
+    colliding with the enemy but will disappear after some time. Bombs will only
+    kill the enemies.
+
+
+    Player has ten health. Each time you collide with an
+    enemy, two health will be deducted.'
 --- !u!222 &335061018
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1174,7 +1180,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: c57dae0206eb1654e95b878bd649b001, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.56824493, g: 0.7662353, b: 0.8679245, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
