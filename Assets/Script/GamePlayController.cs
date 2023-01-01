@@ -3,15 +3,15 @@ using UnityEngine.UI;
 
 public class GamePlayController : MonoBehaviour
 {
-    public Text scoretxt;
-    public Text yourScoretxt;
-    int score = 0;
+    public Text goldTxt;
+    public Text YourGoldTxt;
+    int gold = 0;
     public AudioSource explosion;
     public void getScore()
     {
         explosion.Play();
-        score++;
-        scoretxt.text = "Score: " + score.ToString();
-        yourScoretxt.text = "Your Score:\n" + score.ToString();
+        gold++;
+        goldTxt.text = ": " + gold.ToString();
+        YourGoldTxt.text = "Gold received after the game \n:" + gold.ToString();
     }
 }

@@ -2,14 +2,15 @@ using UnityEngine;
 
 public class selfDestroy : MonoBehaviour
 {
+    public float timeDestroy;
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("Destroy", 4f);
+        Invoke("Destroy", timeDestroy);
     }
 
     void Destroy()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

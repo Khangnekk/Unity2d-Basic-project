@@ -300,7 +300,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 669410543}
-  - {fileID: 978974133}
   - {fileID: 319971710}
   - {fileID: 573117900}
   - {fileID: 525931107}
@@ -417,12 +416,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319971709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4813.0264}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 104.817024, y: 87.16926, z: 53.478073}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 978974133}
   m_Father: {fileID: 145952811}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &319971711
 SpriteRenderer:
@@ -650,7 +650,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 145952811}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -730,7 +730,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 145952811}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -791,6 +791,7 @@ GameObject:
   - component: {fileID: 669410546}
   - component: {fileID: 669410545}
   - component: {fileID: 669410544}
+  - component: {fileID: 669410547}
   m_Layer: 5
   m_Name: muteBtn
   m_TagString: Untagged
@@ -874,6 +875,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 669410547}
+        m_TargetAssemblyTypeName: buttonMuteUnmute, Assembly-CSharp
+        m_MethodName: buttonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &669410545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,7 +907,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2c248ae47fa9bd74b9885fe57437c302, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da97148f3dada6543bd817eafc499704, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -912,6 +925,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669410542}
   m_CullTransparentMesh: 1
+--- !u!114 &669410547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669410542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a3edb88da809c458cb9018b2068302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundOnImg: {fileID: 21300000, guid: da97148f3dada6543bd817eafc499704, type: 3}
+  soundOffImg: {fileID: 21300000, guid: 2c248ae47fa9bd74b9885fe57437c302, type: 3}
+  button: {fileID: 669410544}
 --- !u!1 &929436521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,16 +1101,16 @@ RectTransform:
   m_GameObject: {fileID: 978974132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.009540435, y: 0.011471935, z: 0.018699253}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 145952811}
-  m_RootOrder: 1
+  m_Father: {fileID: 319971710}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000000059605, y: -83.94}
-  m_SizeDelta: {x: 220, y: 48}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 2.67, y: 1.83}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978974134
 MonoBehaviour:
@@ -1509,6 +1537,7 @@ GameObject:
   - component: {fileID: 1611769069}
   - component: {fileID: 1611769068}
   - component: {fileID: 1611769067}
+  - component: {fileID: 1611769070}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1575,13 +1604,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611769066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -2.47, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1611769070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611769066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e14597009cde52459da0b39780927b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.008
 --- !u!1 &1681766062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,7 +2161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0000038146973}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1144.52, y: 643.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2102700562

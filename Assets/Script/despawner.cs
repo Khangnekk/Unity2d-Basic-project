@@ -5,6 +5,6 @@ public class despawner : MonoBehaviour
 
     public virtual void Despawn()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

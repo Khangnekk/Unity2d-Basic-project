@@ -6,7 +6,7 @@ public class playerPosition : MonoBehaviour
     List<GameObject> boms;
     public GameObject bomPrefab;
     public float spawnTimer = 0f;
-    public float spawnDelay = 1f;
+    public float spawnDelay = 0.8f;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,12 +28,9 @@ public class playerPosition : MonoBehaviour
         spawnTimer = 0f;
 
         if (boms.Count >= 5) return;
-        int index = boms.Count + 1;
         GameObject bom = Instantiate(bomPrefab);
-        bom.name = "Bom #" + index;
         bom.transform.position = transform.position;
         bom.gameObject.SetActive(true);
-
         boms.Add(bom);
     }
 
@@ -43,8 +40,11 @@ public class playerPosition : MonoBehaviour
         for (int i = 0; i < boms.Count; i++)
         {
             bom = boms[i];
-            if (bom == null)
+            if (!bom.activeSelf)
             {
+                spawnTimer += Time.deltaTime;
+                if (spawnTimer < spawnDelay) return;
+                spawnTimer = 0;
                 boms.RemoveAt(i);
             }
         }

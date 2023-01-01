@@ -23,11 +23,14 @@ public class gamePlayMenuController : MonoBehaviour
     }
     public void PauseGame()
     {
+        settingCanvas.SetActive(false);
         Time.timeScale = 0;
         bgSound.Pause();
+
     }
     public void ResumeGame()
     {
+        settingCanvas.SetActive(false);
         Time.timeScale = 1;
         bgSound.Play();
     }

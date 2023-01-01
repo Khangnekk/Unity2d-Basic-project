@@ -16,8 +16,12 @@ public class playerController : MonoBehaviour
         damageReceiver = GetComponent<damageReceiver>();
         playerStatus = GetComponent<playerStatus>();
     }
-
     private void FixedUpdate()
+    {
+        _Move();
+    }
+
+    void _Move()
     {
         Vector2 direction = Vector2.up * joystick.Vertical + Vector2.right * joystick.Horizontal;
         if (isPhysics)
@@ -29,5 +33,6 @@ public class playerController : MonoBehaviour
             gameObject.transform.Translate(direction * moveSpeed * Time.deltaTime);
         }
     }
+
 
 }

@@ -4,6 +4,7 @@ public class playerStatus : MonoBehaviour
 {
     protected playerController playerController;
     public GameObject yourScoreCanvas;
+    public GameObject settingCanvas;
     public AudioSource gameOverSound;
 
     public void Awake()
@@ -21,6 +22,7 @@ public class playerStatus : MonoBehaviour
     public virtual void Dead()
     {
         yourScoreCanvas.SetActive(true);
+        settingCanvas.SetActive(false);
         gameOverSound.Play();
     }
 }
