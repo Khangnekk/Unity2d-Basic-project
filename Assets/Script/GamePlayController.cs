@@ -12,6 +12,6 @@ public class GamePlayController : MonoBehaviour
         explosion.Play();
         gold++;
         goldTxt.text = ": " + gold.ToString();
-        YourGoldTxt.text = "Gold received after the game \n:" + gold.ToString();
+        YourGoldTxt.text = "Gold received after the game \n" + gold.ToString();
     }
 }
