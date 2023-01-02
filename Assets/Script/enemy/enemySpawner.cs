@@ -7,8 +7,11 @@ public class enemySpawner : MonoBehaviour
     protected GameObject enemyPrefab;
     protected float timer = 0;
     protected float delay = 0.8f;
+    protected float dTimer = 0;
+    protected float dDelay = 0.8f;
     List<GameObject> enemys;
     public float currentEnemy = 0;
+    public float maxEnemy = 15;
     private void Awake()
     {
         instance = this;
@@ -31,7 +34,7 @@ public class enemySpawner : MonoBehaviour
         if (timer < delay) return;
         timer = 0;
 
-        if (enemys.Count >= 15) return;
+        if (enemys.Count >= maxEnemy) return;
         GameObject enemy = Instantiate(enemyPrefab);
         enemy.transform.position = transform.position;
         enemy.SetActive(true);
@@ -46,9 +49,9 @@ public class enemySpawner : MonoBehaviour
             enemy = enemys[i];
             if (!enemy.activeSelf)
             {
-                timer += Time.deltaTime;
-                if (timer < delay) return;
-                timer = 0;
+                dTimer += Time.deltaTime;
+                if (dTimer < dDelay) return;
+                dTimer = 0;
                 enemy.SetActive(true);
             }
         }

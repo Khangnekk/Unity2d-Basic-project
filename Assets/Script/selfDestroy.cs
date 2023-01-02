@@ -12,5 +12,6 @@ public class selfDestroy : MonoBehaviour
     void Destroy()
     {
         gameObject.SetActive(false);
+        gamePlayMenuController.instance.currentBomb++;
     }
 }
